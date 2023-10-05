@@ -15,14 +15,32 @@ body {
     margin: auto;
 }
 
+#moon {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 #banner {
     width: 1100px;
     height: 250px;
     background-image: url("images/banner.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     color: #414673;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    animation: animatedBackground 2s linear infinite alternate;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 125%;
+    }
 }
 
 main {
@@ -64,4 +82,12 @@ ul li a {
 article {
     width: 33%;
     text-align: center;
+}
+
+.animal {
+    transition: transform 5s ease-in-out infinite;
+}
+
+.animal:hover {
+    transform: translateY(-50px);
 }
