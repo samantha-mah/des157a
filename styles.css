@@ -84,10 +84,51 @@ article {
     text-align: center;
 }
 
-.animal {
-    transition: transform 5s ease-in-out infinite;
+#duck {
+    background-image: url(images/cloud1.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
-.animal:hover {
-    transform: translateY(-50px);
+#bunny {
+    background-image: url(images/cloud2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
+
+#bear {
+    background-image: url(images/cloud3.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.animal:hover img {
+    cursor:pointer;
+    animation: animalTranslateUpandDown 1s ease forwards;
+}
+
+@keyframes animalTranslateUpandDown {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-25px);
+    }
+    75% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animalTranslateDown {
+    from {
+        tranform: translateY(-25px)
+    }
+    to {
+        tranform: translateY(0px)
+    }
+}
+
+
