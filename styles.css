@@ -145,7 +145,11 @@ article {
 
 footer {
     background-image: url(images/footer.png);
-    padding: 200px 0 0 0;
+    padding: 150px 0 0 0;
     background-position: bottom;
     background-repeat: no-repeat;
+}
+
+footer p {
+    padding: 0 0 35px 100px;
 }
