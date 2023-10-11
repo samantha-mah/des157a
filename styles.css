@@ -128,15 +128,6 @@ article {
     }
 }
 
-@keyframes animalTranslateDown {
-    from {
-        tranform: translateY(-25px)
-    }
-    to {
-        tranform: translateY(0px)
-    }
-}
-
 footer {
     background-image: url(images/footermobile.png);
     background-repeat: no-repeat;
