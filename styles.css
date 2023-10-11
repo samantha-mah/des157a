@@ -186,7 +186,7 @@ footer p {
         background-image: url(images/footer.png);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: top;
         padding-top: 150px;
     }
 
@@ -199,5 +199,9 @@ footer p {
     #moon {
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    .animal {
+        padding:0;
     }
 }
