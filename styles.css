@@ -1,3 +1,7 @@
+body, html {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(160deg, #B7C9FA, #FFBADF, #79D6F8, #ADD5EF);
     background-size: 400% 400%;
@@ -29,7 +33,7 @@ article {
     padding: 10px 0 0 20px;
     animation: animatedBackground 2s linear infinite alternate;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #moon {
@@ -48,14 +52,14 @@ article {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     color: #414673;
     font-size: 24px;
 }
 
 h2 {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     color: #414673;
     font-size: 18px;
 }
@@ -67,7 +71,7 @@ ul {
 p, ul li {
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
-    font-weight: regular;
+    font-weight: 400;
     font-size: 18px;
     color: #414673;
 }
@@ -134,7 +138,7 @@ article {
 }
 
 footer {
-    background-image: url(images/footer.png);
+    background-image: url(images/footermobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -142,10 +146,16 @@ footer {
 
 footer p {
     text-align: center;
-    padding-bottom: 50px;
+    padding: 100px 0 25px 0;
+    margin-top: 0;
 }
 
 @media only screen and (min-width: 600px) {
+    article {
+        margin: 0;
+        max-width: 25vw;
+    }
+
     body {
         max-width: 1200px;
         margin: auto;
@@ -153,7 +163,7 @@ footer p {
     
     h1 {
         font-family: 'Poppins', sans-serif;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 50px;
         text-align: left;
         color: #414673;
@@ -161,7 +171,7 @@ footer p {
 
     h2 {
         font-family: 'Poppins', sans-serif;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 24px;
         color: #414673;
     }
@@ -176,10 +186,14 @@ footer p {
 
     main {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     footer {
+        background-image: url(images/footer.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         padding: 150px 0 0 0;
     }
 
