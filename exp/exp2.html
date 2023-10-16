@@ -23,6 +23,13 @@
     <div id="blurb"></div>
     
     <script>
+        // Asks the user to input their birth month
+        // Loops through every birth month until the input matches
+        // Background color changes to color of birthstone
+        // Blurb about the symbolism of user's birthstone
+        // Text color is either styled as black or white
+        // When function is called, the background color and blurb are returned
+        
         function birthMonth(input) {
             var input = prompt("What is your birth month?");
 
@@ -203,7 +210,8 @@
         }
 
         birthMonth();
-        
+        // Adds styling to the text from the function birthMonth
+
         function styling(birthMonth) {
             document.getElementById("blurb").style.fontFamily = "poppins";
             document.getElementById("blurb").style.width = "50vw";
