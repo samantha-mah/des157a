@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link href="styles.css" rel="stylesheet">
 
@@ -23,32 +23,68 @@
     <h1>MadLibs</h1>
     <main>
         <form>
-            <label for "question1"></label>
-            <input type="text" name ="question1" id="question1" required>
+            <div class="form-question">
+                <label for "question1">Number</label>
+                <input type="text" name ="question1" id="question1" required>
+            </div>
+
+            <div class="form-question">
+                <label for "question2">Food</label>
+                <input type="text" name ="question2" id="question2" required>
+            </div>
+
+            <div class="form-question">
+                <label for "question3">Food</label>
+                <input type="text" name ="question3" id="question3" required>
+            </div>
+
+            <div class="form-question">
+                <label for "question4">Food</label>
+                <input type="text" name ="question4" id="question4" required>
+            </div>
+
+            <div class="form-question">
+                <label for "question5">Adverb</label>
+                <input type="text" name ="question5" id="question5" required>
+            </div>
             
-            <label for "question2"></label>
-            <input type="text" name ="question2" id="question2" required>
+            <div class="form-question">
+                <label for "question6">Noun</label>
+                <input type="text" name ="question6" id="question6" required>
+            </div>
 
-            <label for "question3"></label>
-            <input type="text" name ="question3" id="question3" required>
+            <div class="form-question">
+                <label for "question7">Number</label>
+                <input type="text" name ="question7" id="question7" required>
+            </div>
 
-            <label for "question4"></label>
-            <input type="text" name ="question4" id="question4" required>
+            <div class="form-question">
+                <label for "question8">Number</label>
+                <input type="text" name ="question8" id="question8" required>
+            </div>
 
-            <label for "question5"></label>
-            <input type="text" name ="question5" id="question5" required>
-            
-            <label for "question6"></label>
-            <input type="text" name ="question6" id="question6" required>
-
-            <label for "question7"></label>
-            <input type="text" name ="question7" id="question7" required>
-
-            <label for "question8"></label>
-            <input type="text" name ="question8" id="question8" required>
+            <div class="form-question">
+                <label for "question9">Adjective</label>
+                <input type="text" name ="question9" id="question9" required>
+            </div>
 
             <input type="submit" name="submit" id="submit">
         </form>
+
+        <img class="yellow-balloon" src="images/yellow-balloon.png">
+        <img class="purple-balloon" src="images/purple-balloon.png">
     </main>
+
+    <section id="overlay" class="hidden">
+        <article>
+            <h2>Let's Play</h2>
+            <h1>MadLibs</h1>
+            <p>My best friend is turning [number] years old, and I want to bake them a cake. After mixing [food], [food], and [food] [adverb], I put it in the [noun] to bake at [number] degrees for [number] minutes. My friend said that the cake is very [adjective]!
+            </p>
+            <button class="close">Close X</button>
+            <img class="animals" src="images/animals.png">
+        </article>
+    </section>
+
 </body>
 </html>
