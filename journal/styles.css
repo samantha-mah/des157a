@@ -91,7 +91,7 @@ img {
 @media only screen and (min-width: 600px) {
     article {
         /* margin: auto; */
-        width: 50vw;
+        width: 75vw;
         margin-top: 100px;
         margin-bottom: 100px;
     }
@@ -120,7 +120,7 @@ img {
     }
 
     article h2, h3, p {
-        width: 30vw;
+        width: 50vw;
     }
 
     p, ul li, date {
@@ -132,10 +132,10 @@ img {
     }
 
     img {
-        max-width: 40vw;
+        width: 50vw;
     }
 
     date {
-        width: 30vw;
+        width: 50vw;
     }
 }
