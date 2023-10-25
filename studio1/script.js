@@ -5,10 +5,14 @@
 
     console.log('reading js');
 
-    const form = document.querySelector("#form");
+    const myform = document.querySelector("#myform");
     const madlib = document.querySelector("#madlib");
+    const textFields = document.querySelectorAll('input[type=text]');
 
-    form.addEventListener('submit', function(event) {
+    myform.addEventListener('submit', function(event){
+        event.preventDefault();
+        console.log("submtted");
+
         event.preventDefault();
         const q1 = document.querySelector('#question1').value;
         const q2 = document.querySelector('#question2').value;
@@ -23,72 +27,101 @@
         let myText = "";
 
         if(q1 == "") {
-            myText = "Please provide a number";
+            const error1 = document.querySelector("#error1");
+            error1.innerHTML = "Please provide a number";
+            error1.setAttribute("class", "error");
             document.querySelector("#question1").focus();
         }
         else if(q2 == "") {
-            myText = "Please provide a food";
+            const error2 = document.querySelector("#error2");
+            error2.innerHTML = "Please provide a food";
+            error2.setAttribute("class", "error");            
             document.querySelector("#question2").focus();
         }
         else if(q3 == "") {
-            myText = "Please provide a food";
+            const error3 = document.querySelector("#error3");
+            error3.innerHTML = "Please provide a food";
+            error3.setAttribute("class", "error");            
             document.querySelector("#question3").focus();
         }
         else if(q4 == "") {
-            myText = "Please provide a food";
+            const error4 = document.querySelector("#error4");
+            error4.innerHTML = "Please provide a food";
+            error4.setAttribute("class", "error");            
             document.querySelector("#question4").focus();
         }
         else if(q5 == "") {
-            myText = "Please provide an adverb";
+            const error5 = document.querySelector("#error5");
+            error5.innerHTML = "Please provide an adverb";
+            error5.setAttribute("class", "error");            
             document.querySelector("#question5").focus();
         }
         else if(q6 == "") {
-            myText = "Please provide a noun";
+            const error6 = document.querySelector("#error6");
+            error6.innerHTML = "Please provide a noun";
+            error6.setAttribute("class", "error");            
             document.querySelector("#question6").focus();
         }
         else if(q7 == "") {
-            myText = "Please provide a number";
+            const error7 = document.querySelector("#error7");
+            error7.innerHTML = "Please provide a number";
+            error7.setAttribute("class", "error");            
             document.querySelector("#question7").focus();
         }
         else if(q8 == "") {
-            myText = "Please provide a number";
+            const error8 = document.querySelector("#error8");
+            error8.innerHTML = "Please provide a number";
+            error8.setAttribute("class", "error");            
             document.querySelector("#question8").focus();
         }
         else if(q9 == "") {
-            myText = "Please provide an adjective";
+            const error9 = document.querySelector("#error9");
+            error9.innerHTML = "Please provide an adjective";
+            error9.setAttribute("class", "error");            
             document.querySelector("#question9").focus();
         }
         else {
-            // mySentence = document.getElementById("#mySentence");
 
             myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake. After mixing ${q2}, ${q3}, and ${q3} ${q4}, I put it in the ${q5} to bake at ${q6} degrees for ${q7} minutes. My friend said that the cake is very ${q8}!</p>`;
 
-            const textFields = document.querySelectorAll('input[type=text]');
-        }
+            // const textFields = document.querySelectorAll('input[type=text]');
 
-        for(const eachField of textFields) {
-            eachField.value = "";
+            for(const eachField of textFields) {
+                eachField.value = "";
+            }
+    
+            madlib.innerHTML = myText;
+            
+            document.querySelector('#overlay').className = "showing";
+            document.querySelector('.animals').className = "animals animals-appear";
         }
-
-        madlib.innerHTML = myText;
         
-    });
-
-    document.querySelector("#submit").addEventListener('click', function(event) {
-        event.preventDefault();
-        document.querySelector('#overlay').className = "showing";
-        document.querySelector('.animals').className = "animals animals-animate";
     });
 
     document.querySelector(".close").addEventListener('click', function(event) {
         event.preventDefault();
-        document.querySelector('#overlay').className = "hidden";    
+        document.querySelector('#overlay').className = "hidden";
+        document.querySelector('.animals').className = "animals animals-disappear";
+    
     });
 
     document.addEventListener('keydown', function(event) {
         if(event.key === "Escape") {
             document.getElementById('overlay').className = "hidden";
+            document.querySelector('.animals').className = "animals animals-disappear";
         }
     });
+
+    for(const eachTextField of textFields){
+        eachTextField.addEventListener("change", function(event) {
+            //alert(event.target.id);
+            const thisField = event.target.id;
+            const fieldNumber = thisField.charAt(thisField.length-1);
+
+            document.querySelector(`#error${fieldNumber}`).innerHTML = '';
+        });
+
+    }
+
     
 })();

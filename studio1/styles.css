@@ -70,6 +70,13 @@ p {
     padding-top: 30px;
 }
 
+.error {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+}
+
 input[type="text"]:focus {
     border:1px solid #D6D9DC;
     outline: 0;
@@ -172,7 +179,7 @@ article {
     margin: auto;
 }
 
-.animals-animate {
+.animals-appear {
     animation: animalsTranslateUp 1s ease forwards;
 }
 
@@ -182,6 +189,19 @@ article {
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+.animals-disappear {
+    animation: animalsTranslateDown 1s ease forwards;
+}
+
+@keyframes animalsTranslateDown {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(500px);
     }
 }
 
