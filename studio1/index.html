@@ -22,50 +22,50 @@
     <h2>Let's Play</h2>
     <h1>MadLibs</h1>
     <main>
-        <form>
+        <form id="form">
             <div class="form-question">
                 <label for="question1">Number</label>
-                <input type="text" name ="question1" id="question1" required>
+                <input type="text" name ="question1" id="question1">
             </div>
 
             <div class="form-question">
                 <label for="question2">Food</label>
-                <input type="text" name ="question2" id="question2" required>
+                <input type="text" name ="question2" id="question2">
             </div>
 
             <div class="form-question">
                 <label for="question3">Food</label>
-                <input type="text" name ="question3" id="question3" required>
+                <input type="text" name ="question3" id="question3">
             </div>
 
             <div class="form-question">
                 <label for="question4">Food</label>
-                <input type="text" name ="question4" id="question4" required>
+                <input type="text" name ="question4" id="question4">
             </div>
 
             <div class="form-question">
                 <label for="question5">Adverb</label>
-                <input type="text" name ="question5" id="question5" required>
+                <input type="text" name ="question5" id="question5">
             </div>
             
             <div class="form-question">
                 <label for="question6">Noun</label>
-                <input type="text" name ="question6" id="question6" required>
+                <input type="text" name ="question6" id="question6">
             </div>
 
             <div class="form-question">
                 <label for="question7">Number</label>
-                <input type="text" name ="question7" id="question7" required>
+                <input type="text" name ="question7" id="question7">
             </div>
 
             <div class="form-question">
                 <label for="question8">Number</label>
-                <input type="text" name ="question8" id="question8" required>
+                <input type="text" name ="question8" id="question8">
             </div>
 
             <div class="form-question">
                 <label for="question9">Adjective</label>
-                <input type="text" name ="question9" id="question9" required>
+                <input type="text" name ="question9" id="question9">
             </div>
 
             <input type="submit" name="submit" id="submit">
@@ -76,11 +76,10 @@
     </main>
 
     <section id="overlay" class="hidden">
-        <article>
+        <article id="madlib">
             <h2>Let's Play</h2>
             <h1>MadLibs</h1>
-            <p>My best friend is turning [number] years old, and I want to bake them a cake. After mixing [food], [food], and [food] [adverb], I put it in the [noun] to bake at [number] degrees for [number] minutes. My friend said that the cake is very [adjective]!
-            </p>
+            <p id="mySentence"></p>
             <button class="close">Close X</button>
             <img class="animals" src="images/animals.png" alt="bear with cake">
         </article>
