@@ -5,13 +5,12 @@
 
     console.log('reading js');
 
-    const myform = document.querySelector("#myform");
-    const madlib = document.querySelector("#madlib");
+    const myForm = document.querySelector("#myForm");
     const textFields = document.querySelectorAll('input[type=text]');
 
-    myform.addEventListener('submit', function(event){
+    myForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log("submtted");
+        console.log("submitted");
 
         event.preventDefault();
         const q1 = document.querySelector('#question1').value;
@@ -23,6 +22,8 @@
         const q7 = document.querySelector('#question7').value;
         const q8 = document.querySelector('#question8').value;
         const q9 = document.querySelector('#question9').value;
+        const q10 = document.querySelector('#question10').value;
+        const q11 = document.querySelector('#question11').value;
 
         let myText = "";
 
@@ -34,11 +35,11 @@
         }
         else if(q2 == "") {
             const error2 = document.querySelector("#error2");
-            error2.innerHTML = "Please provide a food";
+            error2.innerHTML = "Please provide an emotion";
             error2.setAttribute("class", "error");            
             document.querySelector("#question2").focus();
         }
-        else if(q3 == "") {
+        else if(q2 == "") {
             const error3 = document.querySelector("#error3");
             error3.innerHTML = "Please provide a food";
             error3.setAttribute("class", "error");            
@@ -52,19 +53,19 @@
         }
         else if(q5 == "") {
             const error5 = document.querySelector("#error5");
-            error5.innerHTML = "Please provide an adverb";
+            error5.innerHTML = "Please provide a food";
             error5.setAttribute("class", "error");            
             document.querySelector("#question5").focus();
         }
         else if(q6 == "") {
             const error6 = document.querySelector("#error6");
-            error6.innerHTML = "Please provide a noun";
+            error6.innerHTML = "Please provide an adverb";
             error6.setAttribute("class", "error");            
             document.querySelector("#question6").focus();
         }
         else if(q7 == "") {
             const error7 = document.querySelector("#error7");
-            error7.innerHTML = "Please provide a number";
+            error7.innerHTML = "Please provide a kitchen appliance";
             error7.setAttribute("class", "error");            
             document.querySelector("#question7").focus();
         }
@@ -76,24 +77,33 @@
         }
         else if(q9 == "") {
             const error9 = document.querySelector("#error9");
-            error9.innerHTML = "Please provide an adjective";
+            error9.innerHTML = "Please provide a number";
             error9.setAttribute("class", "error");            
             document.querySelector("#question9").focus();
         }
+        else if(q10 == "") {
+            const error10 = document.querySelector("#error10");
+            error10.innerHTML = "Please provide a color";
+            error10.setAttribute("class", "error");            
+            document.querySelector("#question10").focus();
+        }
+        else if(q11 == "") {
+            const error11 = document.querySelector("#error11");
+            error11.innerHTML = "Please provide an adjective";
+            error11.setAttribute("class", "error");            
+            document.querySelector("#question11").focus();
+        }
         else {
-
-            myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake. After mixing ${q2}, ${q3}, and ${q3} ${q4}, I put it in the ${q5} to bake at ${q6} degrees for ${q7} minutes. My friend said that the cake is very ${q8}!</p>`;
-
-            // const textFields = document.querySelectorAll('input[type=text]');
+            myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake to express my ${q2}. I gather all of my ingredients and follow the recipe to mix ${q3}, ${q4}, and ${q5} ${q6}. I put it in the ${q7} to bake at ${q8} degrees. After ${q9} minutes, the cake is done baking. It has to look as good as it tastes, so I add ${q10} frosting and sprinkles. My friend said that the cake is very ${q11}!</p>`;
 
             for(const eachField of textFields) {
                 eachField.value = "";
             }
     
-            madlib.innerHTML = myText;
+            mySentence.innerHTML = myText;
             
             document.querySelector('#overlay').className = "showing";
-            document.querySelector('.animals').className = "animals animals-appear";
+            document.querySelector('.bear').className = "bear bear-appear";
         }
         
     });
@@ -101,18 +111,18 @@
     document.querySelector(".close").addEventListener('click', function(event) {
         event.preventDefault();
         document.querySelector('#overlay').className = "hidden";
-        document.querySelector('.animals').className = "animals animals-disappear";
+        document.querySelector('.bear').className = "bear bear-disappear";
     
     });
 
     document.addEventListener('keydown', function(event) {
         if(event.key === "Escape") {
             document.getElementById('overlay').className = "hidden";
-            document.querySelector('.animals').className = "animals animals-disappear";
+            document.querySelector('.bear').className = "bear bear-disappear";
         }
     });
 
-    for(const eachTextField of textFields){
+    for(const eachTextField of textFields) {
         eachTextField.addEventListener("change", function(event) {
             //alert(event.target.id);
             const thisField = event.target.id;
@@ -123,5 +133,5 @@
 
     }
 
-    
+
 })();

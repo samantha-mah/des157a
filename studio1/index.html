@@ -19,10 +19,10 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h2>Let's Play</h2>
-    <h1>MadLibs</h1>
     <main>
-        <form id="myform">
+        <h2>Let's Play</h2>
+        <h1>MadLibs</h1>
+        <form id="myForm">
             <div class="form-question">
                 <label for="question1">Number</label>
                 <input type="text" name ="question1" id="question1">
@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-question">
-                <label for="question2">Food</label>
+                <label for="question2">Emotion</label>
                 <input type="text" name ="question2" id="question2">
                 <div id="error2"></div>
             </div>
@@ -43,24 +43,24 @@
 
             <div class="form-question">
                 <label for="question4">Food</label>
-                <input type="text" name ="question4" id="question4">
+                <input type="text" name ="question3" id="question4">
                 <div id="error4"></div>
             </div>
 
             <div class="form-question">
-                <label for="question5">Adverb</label>
+                <label for="question5">Food</label>
                 <input type="text" name ="question5" id="question5">
                 <div id="error5"></div>
             </div>
-            
+
             <div class="form-question">
-                <label for="question6">Noun</label>
+                <label for="question6">Adverb</label>
                 <input type="text" name ="question6" id="question6">
                 <div id="error6"></div>
             </div>
-
+            
             <div class="form-question">
-                <label for="question7">Number</label>
+                <label for="question7">Kitchen Appliance</label>
                 <input type="text" name ="question7" id="question7">
                 <div id="error7"></div>
             </div>
@@ -72,16 +72,28 @@
             </div>
 
             <div class="form-question">
-                <label for="question9">Adjective</label>
+                <label for="question9">Number</label>
                 <input type="text" name ="question9" id="question9">
                 <div id="error9"></div>
+            </div>
+
+            <div class="form-question">
+                <label for="question10">Color</label>
+                <input type="text" name ="question10" id="question10">
+                <div id="error10"></div>
+            </div>
+
+            <div class="form-question">
+                <label for="question11">Adjective</label>
+                <input type="text" name ="question11" id="question11">
+                <div id="error11"></div>
             </div>
 
             <input type="submit" name="submit" id="submit">
         </form>
 
-        <img class="yellow-balloon" src="images/yellow-balloon.png" alt="yellow balloon">
-        <img class="purple-balloon" src="images/purple-balloon.png" alt="purple balloon">
+        <img class="duck" src="images/duck.png" alt="duck with yellow balloon">
+        <img class="bunny" src="images/bunny.png" alt="bunny with purple balloon">
     </main>
 
     <section id="overlay" class="hidden">
@@ -90,7 +102,7 @@
             <h1>MadLibs</h1>
             <p id="mySentence"></p>
             <button class="close">Close X</button>
-            <img class="animals" src="images/animals.png" alt="bear with cake">
+            <img class="bear" src="images/bear.png" alt="bear with cake">
         </article>
     </section>
 

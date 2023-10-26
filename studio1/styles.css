@@ -1,6 +1,6 @@
 body {
     background-image: url("images/madlibs-background-mobile.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: #F9F5F4;
     overflow-y: hidden;
@@ -9,7 +9,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .form-question {
@@ -65,7 +65,7 @@ p {
     font-weight: 400;
     text-align: center;
     color: #000;
-    width: 50%;
+    width: 80%;
     margin: auto;
     padding-top: 30px;
 }
@@ -119,17 +119,14 @@ article {
     opacity: 1;
 }
 
-.yellow-balloon {
-    position: fixed;
-    top: 500px;
-    left: 25px;
-    z-index: -1;
-    animation: balloonTranslateUpandDown 10s ease forwards infinite;
+.bunny {
+    opacity: 0;
 }
-.purple-balloon {
+
+.duck {
     position: fixed;
-    top: 275px;
-    right: 25px;
+    bottom: 100px;
+    right: 0;
     z-index: -1;
     animation: balloonTranslateUpandDown 10s ease forwards infinite;
 }
@@ -171,7 +168,7 @@ article {
     border-radius: 10px;
 }
 
-.animals {
+.bear {
     position: absolute;
     bottom: 0;
     left: 50px;
@@ -179,11 +176,11 @@ article {
     margin: auto;
 }
 
-.animals-appear {
-    animation: animalsTranslateUp 1s ease forwards;
+.bear-appear {
+    animation: bearTranslateUp 1s ease forwards;
 }
 
-@keyframes animalsTranslateUp {
+@keyframes bearTranslateUp {
     0% {
         transform: translateY(500px);
     }
@@ -192,11 +189,11 @@ article {
     }
 }
 
-.animals-disappear {
-    animation: animalsTranslateDown 1s ease forwards;
+.bear-disappear {
+    animation: bearTranslateDown 1s ease forwards;
 }
 
-@keyframes animalsTranslateDown {
+@keyframes bearTranslateDown {
     0% {
         transform: translateY(0px);
     }
@@ -208,6 +205,11 @@ article {
 @media only screen and (min-width: 600px) {
     body {
         background-image: url("images/madlibs-background.jpg");
+        background-size: cover;
+    }
+
+    main {
+        margin-top: 50px;
     }
 
     form {
@@ -222,10 +224,13 @@ article {
         font-size: 18px;
     }
 
+    p {
+        width: 60%;
+    }
+
     #submit {
         margin-top: 20px;
         margin-bottom: 20px;
-        
     }
     
     #overlay {
@@ -254,20 +259,22 @@ article {
         border-radius: 10px;
     }
     
-    .yellow-balloon {
+    .duck {
         position: absolute;
         bottom: 150px;
-        left: 150px;
-        animation: balloonTranslateUpandDown 10s ease forwards infinite;
+        left: 350px;
+        animation: balloonTranslateUpandDown 8s ease forwards infinite;
     }
-    .purple-balloon {
+
+    .bunny {
+        opacity: 1;
         position: absolute;
         top: 150px;
         right: 150px;
-        animation: balloonTranslateUpandDown 10s ease forwards infinite;
+        animation: balloonTranslateUpandDown 12s ease forwards infinite;
     }
 
-    .animals {
+    .bear {
         position: absolute;
         bottom: 0px;
         left: 25px;
@@ -275,7 +282,7 @@ article {
         margin: auto;
     }
 
-    @keyframes animalsTranslateUp {
+    @keyframes bearTranslateUp {
         0% {
             transform: translateY(100px);
         }
