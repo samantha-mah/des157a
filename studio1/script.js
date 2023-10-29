@@ -22,8 +22,6 @@
         const q7 = document.querySelector('#question7').value;
         const q8 = document.querySelector('#question8').value;
         const q9 = document.querySelector('#question9').value;
-        const q10 = document.querySelector('#question10').value;
-        const q11 = document.querySelector('#question11').value;
 
         let myText = "";
 
@@ -59,42 +57,32 @@
         }
         else if(q6 == "") {
             const error6 = document.querySelector("#error6");
-            error6.innerHTML = "Please provide an adverb";
+            error6.innerHTML = "Please provide a kitchen appliance";
             error6.setAttribute("class", "error");            
             document.querySelector("#question6").focus();
         }
         else if(q7 == "") {
             const error7 = document.querySelector("#error7");
-            error7.innerHTML = "Please provide a kitchen appliance";
+            error7.innerHTML = "Please provide a number";
             error7.setAttribute("class", "error");            
             document.querySelector("#question7").focus();
         }
         else if(q8 == "") {
             const error8 = document.querySelector("#error8");
-            error8.innerHTML = "Please provide a number";
+            error8.innerHTML = "Please provide a color";
             error8.setAttribute("class", "error");            
             document.querySelector("#question8").focus();
         }
         else if(q9 == "") {
             const error9 = document.querySelector("#error9");
-            error9.innerHTML = "Please provide a number";
+            error9.innerHTML = "Please provide an adjective";
             error9.setAttribute("class", "error");            
             document.querySelector("#question9").focus();
         }
-        else if(q10 == "") {
-            const error10 = document.querySelector("#error10");
-            error10.innerHTML = "Please provide a color";
-            error10.setAttribute("class", "error");            
-            document.querySelector("#question10").focus();
-        }
-        else if(q11 == "") {
-            const error11 = document.querySelector("#error11");
-            error11.innerHTML = "Please provide an adjective";
-            error11.setAttribute("class", "error");            
-            document.querySelector("#question11").focus();
-        }
         else {
-            myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake to express my ${q2}. I gather all of my ingredients and follow the recipe to mix ${q3}, ${q4}, and ${q5} ${q6}. I put it in the ${q7} to bake at ${q8} degrees. After ${q9} minutes, the cake is done baking. It has to look as good as it tastes, so I add ${q10} frosting and sprinkles. My friend said that the cake is very ${q11}!</p>`;
+            myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake to express my ${q2}. I gather all of my ingredients and follow the recipe to mix ${q3}, ${q4}, and ${q5}. I put it in the ${q6} to bake. After ${q7} minutes, the cake is done baking. It has to look as good as it tastes, so I add ${q8} frosting and sprinkles. My friend said that the cake is very ${q9}!</p>`;
+
+            q1.setAttribute("class", "user-input");
 
             for(const eachField of textFields) {
                 eachField.value = "";
