@@ -109,9 +109,6 @@
             document.querySelector("#a9").innerHTML = q9;
             document.querySelector("#a9").className = ("user-input");
 
-            // const a1 = document.querySelector('q1');
-            // a1.className = "user-input";
-
             for(const eachField of textFields) {
                 eachField.value = "";
             }
