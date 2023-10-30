@@ -23,7 +23,7 @@
         const q8 = document.querySelector('#question8').value;
         const q9 = document.querySelector('#question9').value;
 
-        let myText = "";
+        // let myText = "";
 
         if(q1 == "") {
             const error1 = document.querySelector("#error1");
@@ -80,15 +80,43 @@
             document.querySelector("#question9").focus();
         }
         else {
-            myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake to express my ${q2}. I gather all of my ingredients and follow the recipe to mix ${q3}, ${q4}, and ${q5}. I put it in the ${q6} to bake. After ${q7} minutes, the cake is done baking. It has to look as good as it tastes, so I add ${q8} frosting and sprinkles. My friend said that the cake is very ${q9}!</p>`;
+            // myText = `<p>My best friend is turning ${q1} years old, and I want to bake them a cake to express my ${q2}. I gather all of my ingredients and follow the recipe to mix ${q3}, ${q4}, and ${q5}. I put it in the ${q6} to bake. After ${q7} minutes, the cake is done baking. It has to look as good as it tastes, so I add ${q8} frosting and sprinkles. My friend said that the cake is very ${q9}!</p>`;
 
-            q1.setAttribute("class", "user-input");
+            document.querySelector("#a1").innerHTML = q1;
+            document.querySelector("#a1").className = ("user-input");
+
+            document.querySelector("#a2").innerHTML = q2;
+            document.querySelector("#a2").className = ("user-input");
+
+            document.querySelector("#a3").innerHTML = q3;
+            document.querySelector("#a3").className = ("user-input");
+
+            document.querySelector("#a4").innerHTML = q4;
+            document.querySelector("#a4").className = ("user-input");
+
+            document.querySelector("#a5").innerHTML = q5;
+            document.querySelector("#a5").className = ("user-input");
+
+            document.querySelector("#a6").innerHTML = q6;
+            document.querySelector("#a6").className = ("user-input");
+
+            document.querySelector("#a7").innerHTML = q7;
+            document.querySelector("#a7").className = ("user-input");
+
+            document.querySelector("#a8").innerHTML = q8;
+            document.querySelector("#a8").className = ("user-input");
+
+            document.querySelector("#a9").innerHTML = q9;
+            document.querySelector("#a9").className = ("user-input");
+
+            // const a1 = document.querySelector('q1');
+            // a1.className = "user-input";
 
             for(const eachField of textFields) {
                 eachField.value = "";
             }
     
-            mySentence.innerHTML = myText;
+            // mySentence.innerHTML = myText;
             
             document.querySelector('#overlay').className = "showing";
             document.querySelector('.bear').className = "bear bear-appear";
