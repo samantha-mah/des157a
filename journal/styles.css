@@ -23,12 +23,12 @@ article {
     border-radius: 10px;
 }
 
-article h2, h3, p, date {
+article h2, h3, p, date, figcaption {
     width: 75vw;
     margin: auto;
 }
 
-date {
+date, figcaption {
     display: block;
     margin: auto;
     padding: 10px 0;
@@ -60,7 +60,7 @@ ul {
     padding: 0;
 }
 
-p, ul li, date {
+p, ul li, date, figcaption {
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -71,6 +71,7 @@ p, ul li, date {
 p {
     line-height: 1.6em;
     text-align: left;
+    padding-bottom: 25px;
 }
 
 
@@ -86,6 +87,10 @@ img {
     display: block;
     margin: auto;
     padding: 50px 0;
+}
+
+#cypress, #jellyfish {
+    padding: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -119,11 +124,11 @@ img {
         padding-top: 20px;
     }
 
-    article h2, h3, p {
+    article h2, h3, p, figcaption {
         width: 50vw;
     }
 
-    p, ul li, date {
+    p, ul li, date, figcaption {
         list-style-type: none;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
