@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+}
+
+#camera {
+    aspect-ratio: auto;
+    width: 75vw;
+    display: block;
+    margin: auto;
+    z-index: 1;
+}
+
+#hydrangeas {
+    aspect-ratio: auto;
+    width: 75vw;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    z-index: 0;
+}
