@@ -1,21 +1,134 @@
 body {
-    background-color: #000;
+    background-color: #fff;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay {
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 #camera {
-    aspect-ratio: auto;
-    width: 75vw;
+    position: absolute;
     display: block;
+    aspect-ratio: auto;
+    width: 50vw;
     margin: auto;
+    left: 0;
+    right: 0;
     z-index: 1;
+    padding-top: 100px;
 }
 
 #hydrangeas {
-    aspect-ratio: auto;
-    width: 75vw;
-    display: block;
-    margin: auto;
     position: absolute;
-    top: 100px;
+    display: block;
+    aspect-ratio: auto;
+    width: 7vw;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 175px;
     z-index: 0;
 }
+
+#image1 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 30vw;
+    right: 100px;
+    top: 1000px;
+    z-index: -1;
+}
+
+#image2 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 30vw;
+    left: 300px;
+    top: 1750px;
+    z-index: -3;
+}
+
+#image3 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 30vw;
+    left: 600px;
+    top: 2300px;
+    z-index: -2;
+}
+
+#image4 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 30vw;
+    left: 100px;
+    top: 3500px;
+    z-index: -4;
+}
+
+#image5 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 40vw;
+    right: 100px;
+    top: 3050px;
+    z-index: -5;
+}
+
+#image6 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 40vw;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 4275px;
+    z-index: -6;
+}
+
+#image7 {
+    position: absolute;
+    display: block;
+    aspect-ratio: auto;
+    width: 30vw;
+    right: 100px;
+    top: 5000px;
+    z-index: -6;
+    padding-bottom: 100px;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+}
+
+#blurb {
+    position: absolute;
+    left: 100px;
+    top: 750px;
+    width: 50vw;
+}
+
