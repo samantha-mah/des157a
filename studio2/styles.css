@@ -1,5 +1,42 @@
 body {
+    height: 5500px;
+    background-color: #000;
+}
+
+.one {
+    background-color: #000;
+    transition: all 1s;
+}
+
+.two {
     background-color: #fff;
+    transition: all 1s;
+}
+
+.start {
+    animation: zoomIn 1s ease forwards infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translate(0px);
+    }
+    100% {
+        transform: translate(100px);
+    }
+}
+
+.end {
+    animation: zoomOut 1s ease forwards infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translate(100px);
+    }
+    100% {
+        transform: translate(0px);
+    }
 }
 
 .hidden {
@@ -34,10 +71,8 @@ body {
     position: absolute;
     display: block;
     aspect-ratio: auto;
-    width: 7vw;
-    margin: auto;
-    left: 0;
-    right: 0;
+    width: 10vw;
+    right: 500px;
     top: 175px;
     z-index: 0;
 }
