@@ -87,6 +87,14 @@ body {
     z-index: -1;
 }
 
+#hover1 {
+    position: absolute;
+    display: block;
+    width: 30vw;
+    right: 100px;
+    top: 1000px;
+}
+
 #image2 {
     position: absolute;
     display: block;
@@ -95,6 +103,14 @@ body {
     left: 300px;
     top: 1750px;
     z-index: -3;
+}
+
+#hover2 {
+    position: absolute;
+    display: block;
+    width: 30vw;
+    right: 300px;
+    top: 1750px;
 }
 
 #image3 {
@@ -107,6 +123,14 @@ body {
     z-index: -2;
 }
 
+#hover3 {
+    position: absolute;
+    display: block;
+    width: 30vw;
+    left: 600px;
+    top: 2300px;
+}
+
 #image4 {
     position: absolute;
     display: block;
@@ -117,6 +141,14 @@ body {
     z-index: -4;
 }
 
+#hover4 {
+    position: absolute;
+    display: block;
+    width: 30vw;
+    left: 100px;
+    top: 3500px;
+}
+
 #image5 {
     position: absolute;
     display: block;
@@ -125,6 +157,14 @@ body {
     right: 100px;
     top: 3050px;
     z-index: -5;
+}
+
+#hover5 {
+    position: absolute;
+    display: block;
+    width: 40vw;
+    right: 100px;
+    top: 3050px;
 }
 
 #image6 {
@@ -139,6 +179,16 @@ body {
     z-index: -6;
 }
 
+#hover6 {
+    position: absolute;
+    display: block;
+    width: 40vw;
+    margin: auto;
+    left: 0px;
+    right: 0;
+    top: 4275px;
+}
+
 #image7 {
     position: absolute;
     display: block;
@@ -148,6 +198,14 @@ body {
     top: 5000px;
     z-index: -6;
     padding-bottom: 100px;
+}
+
+#hover7 {
+    position: absolute;
+    display: block;
+    width: 30vw;
+    right: 100px;
+    top: 5000px;
 }
 
 p {
@@ -167,3 +225,16 @@ h1 {
     width: 50vw;
 }
 
+.texthover {
+    animation: textTranslateDown 1s ease forwards infinite;
+}
+
+@keyframes textTranslateDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
