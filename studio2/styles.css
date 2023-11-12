@@ -1,6 +1,9 @@
 body {
-    height: 3500px;
     background-color: #000;
+}
+
+#long-div {
+    height: 3500px;
 }
 
 main {
@@ -16,32 +19,6 @@ main {
     background-color: #fff;
     transition: all 1s;
 }
-
-/* .start {
-    animation: zoomIn 1s ease forwards;
-}
-
-@keyframes zoomIn {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(2);
-    }
-}
-
-.end {
-    animation: zoomOut 1s ease forwards;
-}
-
-@keyframes zoomOut {
-    0% {
-        transform: scale(2);
-    }
-    100% {
-        transform: scale(1);
-    }
-} */
 
 .hidden {
     visibility: hidden;
@@ -61,24 +38,39 @@ main {
 
 #camera {
     position: fixed;
-    display: block;
-    aspect-ratio: auto;
     width: 300px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    padding-top: 100px;
+    left: calc(50% - 150px);
+    top: 0;
 }
 
-#hydrangeas {
-    position: absolute;
-    display: block;
-    aspect-ratio: auto;
+.start {
+    position: fixed;
+    top: 70%;
+    left: 70%;
     width: 100px;
-    right: 500px;
-    top: 175px;
-    z-index: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.middle {
+    position: fixed;
+    top: calc(45% - 250px);
+    left: calc(50% - 250px);
+    width: 500px;
+    opacity: 1;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+.end {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 #image1 {
@@ -191,11 +183,10 @@ h1 {
     }
 
     #camera {
-        width: 50vw;
-    }
-
-    #hydrangeas {
-        width: 10vw;
+        position: fixed;
+        width: 600px;
+        left: calc(50% - 300px);
+        top: 0;
     }
 
     #image1 {
