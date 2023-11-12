@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
 
     let pageTop;
     const bodyTag = document.querySelector('body');
-    const hydrangeas = document.querySelectorAll('.start');
+    const hydrangeas = document.querySelectorAll('#hydrangeas');
     const camera = document.querySelector('#camera');
 
     // gets the width of the window
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
             console.log(`scrolling down ${counter}`);
         }
 
-        else if(counter > 1 && pageTop < breakpoints[counter - 1]) {
+        else if(counter > 1 && pageTop < breakpoints[counter -1]) {
             counter--;
             console.log(`scrolling up ${counter}`);
         } 
@@ -55,7 +55,7 @@ window.addEventListener('load', function () {
         if(counter != prevCounter) {
             if(counter > prevCounter) {
                 if(counter > 1) {
-                    hydrangeas[counter - 2].className = 'end';
+                    // hydrangeas[counter - 2].className = 'end';
                     
                     setTimeout(function() {
                         hydrangeas[counter - 1].className = 'middle';
@@ -81,7 +81,7 @@ window.addEventListener('load', function () {
         }
 
         else if(done) {
-            hydrangeas[0].className = 'start';
+            hydrangeas.className = 'start';
             done = 0;
         }
     });
