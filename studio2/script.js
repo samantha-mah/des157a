@@ -11,9 +11,10 @@ window.addEventListener('load', function () {
     const pageWidth = window.innerWidth;
     const pageHeight = document.querySelector('#long-div').offsetHeight;
 
-    //sets the maximum size for the image
+    //sets the maximum size for the camera
     const maxSize = pageWidth / 2;
 
+    // as user scrolls, camera gets larger, but stops at max size
     window.addEventListener('scroll', function() {
         pageTop = window.scrollY;
 
@@ -25,6 +26,9 @@ window.addEventListener('load', function () {
 
     });
 
+    // when user reaches certain length down the page, background color switches from white to black and vice versa
+    // image src switches from camera to image of hydrangeas after reaching max size
+    // image is removed after page turns white
     window.addEventListener('scroll', function() {
 
         pageTop = window.pageYOffset;
@@ -53,7 +57,7 @@ window.addEventListener('load', function () {
 
 (function () {
     'use strict';
-    
+
     const section1 = document.querySelector('#section1');
     const hover1 = document.querySelector('#hover1');
 

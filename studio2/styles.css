@@ -22,7 +22,7 @@ main {
 }
 
 #camera {
-    position: relative;
+    position: fixed;
     width: 300px;
     left: calc(50% - 150px);
     top: 0;
@@ -40,73 +40,78 @@ main {
     z-index: 5;
 }
 
-#section1 {
+#section2 {
     position: absolute;
-    right: 50px;
-    top: 1000px;
+    left: 50px;
+    top: 1500px;
 }
 
 #image2 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 150px;
-    left: 50px;
-    top: 1500px;
     z-index: 5;
+}
+
+#section3 {
+    position: absolute;
+    left: 150px;
+    top: 1700px;
 }
 
 #image3 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 150px;
-    left: 150px;
-    top: 1700px;
     z-index: 5;
+}
+
+#section4 {
+    position: absolute;
+    left: 50px;
+    top: 2175px;
 }
 
 #image4 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 125px;
-    left: 50px;
-    top: 2175px;
     z-index: 5;
+}
+
+#section5 {
+    position: absolute;
+    right: 50px;
+    top: 2150px;
 }
 
 #image5 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 175px;
-    right: 50px;
-    top: 2150px;
     z-index: 5;
+}
+
+#section6 {
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 2750px;
 }
 
 #image6 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 310px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 2750px;
     z-index: 5;
 }
 
-#image7 {
+#section7 {
     position: absolute;
-    display: block;
-    aspect-ratio: auto;
-    width: 150px;
     right: 50px;
     top: 3250px;
-    z-index: 5;
     padding-bottom: 100px;
+
+}
+
+#image7 {
+    display: block;
+    width: 150px;
+    z-index: 5;
 }
 
 p {
@@ -160,46 +165,67 @@ h1 {
         top: 0;
     }
 
-    #image1 {
-        width: 30vw;
+    #section1 {
         right: 100px;
         top: 1000px;
     }
 
-    #image2 {
+    #image1 {
         width: 30vw;
+    }
+
+    #section2 {
         left: 300px;
         top: 1750px;
     }
 
-    #image3 {
+    #image2 {
         width: 30vw;
+    }
+
+    #section3 {
         left: 600px;
         top: 2300px;
     }
 
-    #image4 {
+    #image3 {
         width: 30vw;
+    }
+
+    #section4 {
         left: 100px;
         top: 3500px;
     }
 
-    #image5 {
-        width: 40vw;
+    #image4 {
+        width: 30vw;
+    }
+
+    #section5 {
         right: 100px;
         top: 3050px;
     }
 
+    #image5 {
+        width: 40vw;
+    }
+
+    #section6 {
+        top: 4275px;
+    }
+
     #image6 {
         width: 40vw;
-        top: 4275px;
+    }
+
+    #section7 {
+        right: 100px;
+        top: 5000px;
+        padding-bottom: 100px;
     }
 
     #image7 {
         width: 30vw;
-        right: 100px;
-        top: 5000px;
-        padding-bottom: 100px;
     }
 
     .hidden {
