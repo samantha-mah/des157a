@@ -34,8 +34,18 @@ window.addEventListener('load', function () {
         pageTop = window.pageYOffset;
 
         switch(true) {
+            case pageTop < 300:
+                camera.setAttribute('src', 'images/camera.png');
+                break;
+
             case pageTop < 500:
-                camera.setAttribute('src', 'images/camera.png'); break;
+                camera.setAttribute('src', 'images/hydrangeas.png');
+                break;
+
+            case pageTop < 650:
+                camera.style.opacity = '0';
+                camera.style.transition = 'all 1s';
+                break;
 
             case pageTop < 750:
                 bodyTag.style.backgroundColor = "#000";
@@ -45,7 +55,6 @@ window.addEventListener('load', function () {
             case pageTop < 5000:
                 bodyTag.style.backgroundColor = "#fff";
                 bodyTag.style.transition = 'all 1s';
-                camera.remove();
                 break;
 
             default: bodyTag.className = "one";
