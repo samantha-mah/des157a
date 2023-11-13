@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
 
     let pageTop;
     const bodyTag = document.querySelector('body');
-    const hydrangeas = document.querySelectorAll('#hydrangeas');
+    const hydrangeas = document.querySelector('#hydrangeas');
     const camera = document.querySelector('#camera');
 
     // gets the width of the window
@@ -12,20 +12,7 @@ window.addEventListener('load', function () {
     const pageHeight = document.querySelector('#long-div').offsetHeight;
 
     //sets the maximum size for the image
-    const maxSize = pageWidth / 3;
-
-    const firstImageEntryPoint = maxSize + 200;
-    let breakpoints = [firstImageEntryPoint];
-    let nextBreakpoint = Math.floor(((pageHeight - firstImageEntryPoint) / hydrangeas.length - 1) + firstImageEntryPoint);
-
-    for(let i = 0; i < hydrangeas.length - 1; i++) {
-        breakpoints.push(nextBreakpoint);
-        nextBreakpoint = nextBreakpoint + Math.floor((pageHeight - firstImageEntryPoint) / hydrangeas.length - 1);
-    }
-    
-    let counter = 0;
-    let prevCounter = 0;
-    let done = 0;
+    const maxSize = pageWidth / 2;
 
     window.addEventListener('scroll', function() {
         pageTop = window.scrollY;
@@ -36,54 +23,6 @@ window.addEventListener('load', function () {
             camera.style.transform = `scale(${ratio}, ${ratio})`;
         }
 
-        if(pageTop > breakpoints[counter]) {
-            counter++;
-            console.log(`scrolling down ${counter}`);
-        }
-
-        else if(counter > 1 && pageTop < breakpoints[counter -1]) {
-            counter--;
-            console.log(`scrolling up ${counter}`);
-        } 
-
-        else if(counter == 1 && pageTop < maxSize) {
-            counter = 0;
-            prevCounter = 0;
-            done = 1;
-        }
-
-        if(counter != prevCounter) {
-            if(counter > prevCounter) {
-                if(counter > 1) {
-                    // hydrangeas[counter - 2].className = 'end';
-                    
-                    setTimeout(function() {
-                        hydrangeas[counter - 1].className = 'middle';
-                    }, 1000);
-                }
-                
-                else {
-                    hydrangeas[counter - 1].className = 'middle';
-                }
-    
-                prevCounter = counter;
-            }
-
-            else {
-                hydrangeas[counter].className = 'start';
-
-                setTimeout(function() {
-                    hydrangeas[counter - 1].className = 'middle';
-                }, 1000);
-
-                prevCounter = counter;
-            }
-        }
-
-        else if(done) {
-            hydrangeas.className = 'start';
-            done = 0;
-        }
     });
 
     window.addEventListener('scroll', function() {
@@ -91,9 +30,19 @@ window.addEventListener('load', function () {
         pageTop = window.pageYOffset;
 
         switch(true) {
-            case pageTop < 500: bodyTag.className = "one"; camera.className = "showing"; break;
+            case pageTop < 500:
+                camera.setAttribute('src', 'images/camera.png'); break;
+
+            case pageTop < 750:
+                bodyTag.style.backgroundColor = "#000";
+                bodyTag.style.transition = 'all 1s';
+                break;
              
-            case pageTop < 5000: bodyTag.className = "two"; camera.className = "hidden"; break;
+            case pageTop < 5000:
+                bodyTag.style.backgroundColor = "#fff";
+                bodyTag.style.transition = 'all 1s';
+                camera.remove();
+                break;
 
             default: bodyTag.className = "one";
             
@@ -101,3 +50,18 @@ window.addEventListener('load', function () {
         
     });
 });
+
+(function () {
+    'use strict';
+    
+    const section1 = document.querySelector('#section1');
+    const hover1 = document.querySelector('#hover1');
+
+    section1.addEventListener('mouseover', function() {
+        hover1.className = "hidden";
+    });
+
+    section1.addEventListener('mouseout', function() {
+        hover1.className = "showing";
+    });
+}) ();

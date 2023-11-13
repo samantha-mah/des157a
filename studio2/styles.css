@@ -1,9 +1,12 @@
 body {
     background-color: #000;
+    z-index: -5;
 }
 
 #long-div {
     height: 3500px;
+    width: 10px;
+    z-index: -4;
 }
 
 main {
@@ -11,76 +14,36 @@ main {
 }
 
 .one {
-    background-color: #000;
     transition: all 1s;
 }
 
 .two {
-    background-color: #fff;
     transition: all 1s;
 }
 
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.showing {
-    visibility: visible;
-    opacity: 1;
-}
-
-#overlay {
-    transition-property: opacity, visibility;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-}
-
 #camera {
-    position: fixed;
+    position: relative;
     width: 300px;
     left: calc(50% - 150px);
     top: 0;
 }
 
-.start {
-    position: fixed;
-    top: 70%;
-    left: 70%;
-    width: 100px;
-    z-index: -1;
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.middle {
-    position: fixed;
-    top: calc(45% - 250px);
-    left: calc(50% - 250px);
-    width: 500px;
-    opacity: 1;
-    z-index: -1;
-    transition: all 1s ease;
-}
-
-.end {
-    position: fixed;
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    z-index: -1;
-    opacity: 0;
-    transition: all 1s ease;
+#section1 {
+    position: absolute;
+    right: 50px;
+    top: 1000px;
 }
 
 #image1 {
-    position: absolute;
     display: block;
-    aspect-ratio: auto;
     width: 150px;
+    z-index: 5;
+}
+
+#section1 {
+    position: absolute;
     right: 50px;
     top: 1000px;
-    z-index: -1;
 }
 
 #image2 {
@@ -90,7 +53,7 @@ main {
     width: 150px;
     left: 50px;
     top: 1500px;
-    z-index: -3;
+    z-index: 5;
 }
 
 #image3 {
@@ -100,7 +63,7 @@ main {
     width: 150px;
     left: 150px;
     top: 1700px;
-    z-index: -2;
+    z-index: 5;
 }
 
 #image4 {
@@ -110,7 +73,7 @@ main {
     width: 125px;
     left: 50px;
     top: 2175px;
-    z-index: -4;
+    z-index: 5;
 }
 
 #image5 {
@@ -120,7 +83,7 @@ main {
     width: 175px;
     right: 50px;
     top: 2150px;
-    z-index: -5;
+    z-index: 5;
 }
 
 #image6 {
@@ -132,7 +95,7 @@ main {
     left: 0;
     right: 0;
     top: 2750px;
-    z-index: -6;
+    z-index: 5;
 }
 
 #image7 {
@@ -142,13 +105,14 @@ main {
     width: 150px;
     right: 50px;
     top: 3250px;
-    z-index: -6;
+    z-index: 5;
     padding-bottom: 100px;
 }
 
 p {
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
+    color: #000;
 }
 
 h1 {
@@ -182,6 +146,13 @@ h1 {
         font-size: 16px;
     }
 
+    #blurb {
+        position: absolute;
+        left: 100px;
+        top: 1500px;
+        width: 50vw;
+    }
+
     #camera {
         position: fixed;
         width: 600px;
@@ -195,37 +166,13 @@ h1 {
         top: 1000px;
     }
 
-    #hover1 {
-        position: absolute;
-        display: block;
-        width: 30vw;
-        right: 100px;
-        top: 1000px;
-    }
-
     #image2 {
         width: 30vw;
         left: 300px;
         top: 1750px;
     }
 
-    #hover2 {
-        position: absolute;
-        display: block;
-        width: 30vw;
-        right: 300px;
-        top: 1750px;
-    }
-
     #image3 {
-        width: 30vw;
-        left: 600px;
-        top: 2300px;
-    }
-
-    #hover3 {
-        position: absolute;
-        display: block;
         width: 30vw;
         left: 600px;
         top: 2300px;
@@ -237,23 +184,7 @@ h1 {
         top: 3500px;
     }
 
-    #hover4 {
-        position: absolute;
-        display: block;
-        width: 30vw;
-        left: 100px;
-        top: 3500px;
-    }
-
     #image5 {
-        width: 40vw;
-        right: 100px;
-        top: 3050px;
-    }
-
-    #hover5 {
-        position: absolute;
-        display: block;
         width: 40vw;
         right: 100px;
         top: 3050px;
@@ -264,16 +195,6 @@ h1 {
         top: 4275px;
     }
 
-    #hover6 {
-        position: absolute;
-        display: block;
-        width: 40vw;
-        margin: auto;
-        left: 0px;
-        right: 0;
-        top: 4275px;
-    }
-
     #image7 {
         width: 30vw;
         right: 100px;
@@ -281,15 +202,13 @@ h1 {
         padding-bottom: 100px;
     }
 
-    #hover7 {
-        position: absolute;
-        display: block;
-        width: 30vw;
-        right: 100px;
-        top: 5000px;
+    .hidden {
+        opacity: 0;
+        transition: all 1s ease-in;
     }
 
-    .texthover {
-        animation: textTranslateDown 1s ease forwards infinite;
+    .showing {
+        opacity: 1;
+        transition: all 1s ease-in;
     }
 }
