@@ -21,14 +21,9 @@ main {
     transition: all 1s;
 }
 
-.hidden {
+.caption {
     opacity: 0;
-    transition: all 1s ease-in;
-}
-
-.showing {
-    opacity: 1;
-    transition: all 1s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 #camera {
@@ -140,16 +135,6 @@ h1 {
     left: 100px;
     top: 750px;
     width: 50vw;
-}
-
-@keyframes textTranslateDown {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(100px);
-    }
 }
 
 @media only screen and (min-width: 600px) {

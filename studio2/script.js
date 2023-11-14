@@ -39,6 +39,7 @@ window.addEventListener('load', function () {
                 break;
 
             case pageTop < 500:
+                camera.style.opacity = '1';
                 camera.setAttribute('src', 'images/hydrangeas.png');
                 break;
 
@@ -62,19 +63,69 @@ window.addEventListener('load', function () {
         }
         
     });
-});
-
-(function () {
-    'use strict';
 
     const section1 = document.querySelector('#section1');
     const hover1 = document.querySelector('#hover1');
 
+    const section2 = document.querySelector('#section2');
+    const hover2 = document.querySelector('#hover2');
+
+    const section3 = document.querySelector('#section3');
+    const hover3 = document.querySelector('#hover3');
+
+    const section4 = document.querySelector('#section4');
+    const hover4 = document.querySelector('#hover4');
+
+    const section5 = document.querySelector('#section5');
+    const hover5 = document.querySelector('#hover5');
+
+    const section6 = document.querySelector('#section6');
+    const hover6 = document.querySelector('#hover6');
+
+    const section7 = document.querySelector('#section7');
+    const hover7 = document.querySelector('#hover7');
+
     section1.addEventListener('mouseover', function() {
-        hover1.className = "hidden";
+        hover1.style.opacity = '1';
+    });
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
     });
 
-    section1.addEventListener('mouseout', function() {
-        hover1.className = "showing";
+    section2.addEventListener('mouseover', function() {
+        hover1.style.opacity = '1';
     });
-}) ();
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
+    });
+
+    section1.addEventListener('mouseover', function() {
+        hover1.style.opacity = '1';
+    });
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
+    });
+
+    section1.addEventListener('mouseover', function() {
+        hover1.style.opacity = '1';
+    });
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
+    });
+
+    section1.addEventListener('mouseover', function() {
+        hover1.style.opacity = '1';
+    });
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
+    });
+
+    section1.addEventListener('mouseover', function() {
+        hover1.style.opacity = '1';
+    });
+    section1.addEventListener('mouseout', function() {
+        hover1.style.opacity = '0';
+    });
+
+
+});
