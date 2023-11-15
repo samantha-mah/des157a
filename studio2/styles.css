@@ -4,7 +4,7 @@ body {
 }
 
 #long-div {
-    height: 3500px;
+    height: 3000px;
     width: 10px;
     z-index: -4;
 }
@@ -30,14 +30,14 @@ main {
     position: fixed;
     width: 300px;
     left: calc(50% - 150px);
-    top: 0;
-    z-index: 10;
+    top: 200px;
+    z-index: 0;
 }
 
 #section1 {
     position: absolute;
     right: 50px;
-    top: 800px;
+    top: 900px;
 }
 
 #image1 {
@@ -48,7 +48,7 @@ main {
 #section2 {
     position: absolute;
     left: 50px;
-    top: 1500px;
+    top: 1200px;
 }
 
 #image2 {
@@ -59,7 +59,7 @@ main {
 #section3 {
     position: absolute;
     left: 150px;
-    top: 1700px;
+    top: 1400px;
 }
 
 #image3 {
@@ -70,7 +70,7 @@ main {
 #section4 {
     position: absolute;
     left: 50px;
-    top: 2175px;
+    top: 1775px;
 }
 
 #image4 {
@@ -81,7 +81,7 @@ main {
 #section5 {
     position: absolute;
     right: 50px;
-    top: 2150px;
+    top: 1750px;
 }
 
 #image5 {
@@ -92,7 +92,7 @@ main {
 #section6 {
     position: absolute;
     left: calc(50% - 150px);
-    top: 2750px;
+    top: 2250px;
 }
 
 #image6 {
@@ -103,7 +103,7 @@ main {
 #section7 {
     position: absolute;
     right: 50px;
-    top: 3250px;
+    top: 2750px;
     padding-bottom: 100px;
 
 }
@@ -126,9 +126,10 @@ h1 {
 
 #blurb {
     position: absolute;
-    left: 100px;
-    top: 400px;
-    width: 50vw;
+    left: calc(50% - 150px);
+    top: 500px;
+    width: 70vw;
+    z-index: -1;
 }
 
 @media only screen and (min-width: 600px) {
@@ -140,11 +141,17 @@ h1 {
         font-size: 16px;
     }
 
+    #long-div {
+        height: 5500px;
+        width: 10px;
+        z-index: -4;
+    }
+
     #blurb {
         position: absolute;
         left: 100px;
         top: 1500px;
-        width: 50vw;
+        width: 45vw;
     }
 
     #camera {
@@ -157,6 +164,7 @@ h1 {
     #section1 {
         right: 100px;
         top: 1000px;
+        z-index: 1;
     }
 
     #image1 {
@@ -166,6 +174,7 @@ h1 {
     #section2 {
         left: 300px;
         top: 1750px;
+        z-index: 1;
     }
 
     #image2 {
@@ -175,6 +184,7 @@ h1 {
     #section3 {
         left: 600px;
         top: 2300px;
+        z-index: 1;
     }
 
     #image3 {
@@ -184,6 +194,7 @@ h1 {
     #section4 {
         left: 100px;
         top: 3500px;
+        z-index: 1;
     }
 
     #image4 {
@@ -193,6 +204,7 @@ h1 {
     #section5 {
         right: 100px;
         top: 3050px;
+        z-index: 1;
     }
 
     #image5 {
@@ -201,6 +213,7 @@ h1 {
 
     #section6 {
         top: 4275px;
+        z-index: 1;
     }
 
     #image6 {
@@ -211,6 +224,7 @@ h1 {
         right: 100px;
         top: 5000px;
         padding-bottom: 100px;
+        z-index: 1;
     }
 
     #image7 {
