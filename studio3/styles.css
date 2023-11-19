@@ -1,0 +1,16 @@
+body {
+    background-color: #D2DCC4;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 74px;
+    font-weight: 700;
+    text-align: center;
+    color: #59714B;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
