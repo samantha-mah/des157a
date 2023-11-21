@@ -31,7 +31,7 @@ p {
     padding: 10px 0;
 }
 
-.buttons {
+.buttons, #actions {
     display: flex;
     justify-content: center;
 }
@@ -72,12 +72,12 @@ p {
     border-radius: 10px;
 }
 
-#close {
+#playgame {
     display: block;
     margin: auto;
 }
 
-.button {
+.cta, #rollagain, #roll {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -87,8 +87,42 @@ p {
     margin: 15px;
 }
 
+button, #pass {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #59714B;
+    background-color: #fff;
+    border-radius: 5px ;
+    margin: 15px;
+}
+
 .pig {
     position: absolute;
     left: calc(50% - 150px);
     bottom: 50px;
+}
+
+#gamecontrol {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#diceRolled {
+    display: flex;
+    justify-content: center;
+}
+
+#dice {
+    width: 5vw;
+    aspect-ratio: auto;
+    margin: 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #59714B;
+    background-position: cover;
 }

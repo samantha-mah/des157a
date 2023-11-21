@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
     <!-- CSS Stylesheet -->
     <link href="styles.css" rel="stylesheet">
 
@@ -21,11 +25,13 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Game of Pig</h1>
-    <h2>First time playing?</h2>
-    <section class="buttons">
-        <button class="button" id="yes">Yes</button>
-        <button class="button" id="no">No</button>
+    <section id="begin">
+        <h1>Game of Pig</h1>
+        <h2>First time playing?</h2>
+        <section class="buttons">
+            <button class="cta" id="yes">Yes</button>
+            <button class="button" id="no">No</button>
+        </section>
     </section>
 
     <section id="overlay" class="hidden">
@@ -39,10 +45,18 @@
                 
             <p>Oh, and if you roll two “ones” (snake eyes), your current score gets zeroed out. So don&apos;t do that.</p>
 
-            <button class="button" id="close">Start Game</button>
+            <button class="cta" id="playgame">Play Game</button>
         </article>
     </section>
+    <div id="gamecontrol"></div>
+    <div id="title"></div>
+    <div id="game"></div>
+    <div id="actions"></div>
 
     <img class="pig" src="images/pig1.png" alt="pig">
+
+    <footer>
+        <div id="score"></div>
+    </footer>
 </body>
 </html>
