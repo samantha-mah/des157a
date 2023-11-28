@@ -13,6 +13,27 @@
 
     no.addEventListener('click', function() {
         document.querySelector('#overlay').className = "hidden";
+        document.querySelector('#begin').remove()
+        // randomly set game index here
+        gameData.index = Math.round(Math.random());
+        console.log(gameData.index);
+    
+        gameControl.innerHTML = '<img id="help" src="images/help.svg" alt="help icon">';
+        gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+        title.innerHTML = '<h1>Game of Pig</h1>';
+    
+        document.getElementById('quit').addEventListener('click', function() {
+            location.reload();
+        });
+    
+        document.getElementById('help').addEventListener('click', function() {
+            document.querySelector('#playgame').innerHTML = "Continue Game";
+            document.querySelector('#overlay').className = "showing";
+        });
+    
+        console.log("set up the turn!");
+    
+        setUpTurn();
     });
 
     playgame.addEventListener('click', function() {
@@ -23,6 +44,26 @@
     document.addEventListener('keydown', function(event) {
         if(event.key === "Escape") {
             document.getElementById('overlay').className = "hidden";
+            // randomly set game index here
+            gameData.index = Math.round(Math.random());
+            console.log(gameData.index);
+        
+            gameControl.innerHTML = '<img id="help" src="images/help.svg" alt="help icon">';
+            gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+            title.innerHTML = '<h1>Game of Pig</h1>';
+        
+            document.getElementById('quit').addEventListener('click', function() {
+                location.reload();
+            });
+        
+            document.getElementById('help').addEventListener('click', function() {
+                document.querySelector('#playgame').innerHTML = "Continue Game";
+                document.querySelector('#overlay').className = "showing";
+            });
+        
+            console.log("set up the turn!");
+        
+            setUpTurn();
         }
     });
 
@@ -78,14 +119,17 @@
             location.reload();
         });
 
+        document.getElementById('help').addEventListener('click', function() {
+            document.querySelector('#playgame').innerHTML = "Continue Game";
+            document.querySelector('#overlay').className = "showing";
+        });
+
         console.log("set up the turn!");
 
         setUpTurn();
     });
 
-    document.getElementById('help').addEventListener('click', function() {
-        document.querySelector('#overlay').className = "showing";
-    });
+    
 
     function setUpTurn() {
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
@@ -163,14 +207,14 @@
 
         else {
             // show current score
-            score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]} ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} ${gameData.score [1]}</strong></p>`;
+            score.innerHTML = `<p><strong>${gameData.players[0]} ${gameData.score[0]}</strong></p> <p><strong>${gameData.players[1]} ${gameData.score [1]}</strong></p>`;
         }
 
         showCurrentScore();
     }
 
     function showCurrentScore() {
-        score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]} ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} ${gameData.score[1]}</strong></p>`;
+        score.innerHTML = `<p><strong>${gameData.players[0]} ${gameData.score[0]}</strong></p> <p><strong>${gameData.players[1]} ${gameData.score[1]}</strong></p>`;
     }
 
 }) ();
