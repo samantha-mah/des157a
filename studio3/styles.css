@@ -79,6 +79,7 @@ p {
     transition-property: opacity, visibility;
     transition-duration: 1s;
     transition-timing-function: ease;
+    z-index: 1;
 }
 
 #overlay article {
@@ -130,7 +131,7 @@ button, #pass {
     left: 0;
     right: 0;
     bottom: 50px;
-    width: auto;
+    width: 50vw;
 }
 
 #gamecontrol {
@@ -142,6 +143,9 @@ button, #pass {
 #game p {
     text-align: center;
     padding-top: 0;
+}
+
+#game {
     position: absolute;
     top: 30%;
     margin-left: auto;
@@ -157,7 +161,7 @@ button, #pass {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 35%;
+    top: 110%;
     text-align: center;
     /* top: calc(50% - 150px);
     left: calc(50% - 150px); */
@@ -228,7 +232,6 @@ footer {
 
     #overlay {
         background-color: #D2DCC4;
-        z-index: 1;
     }
     
     #overlay article {
@@ -243,5 +246,9 @@ footer {
 
     #dice {
         width: 5vw;
+    }
+
+    .pig {
+        width: 15vw;
     }
 }
