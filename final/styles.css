@@ -59,6 +59,14 @@ p {
     padding-bottom: 25px;
 }
 
+img {
+    box-sizing: border-box;
+    max-width: 75vw;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
+}
+
 @media only screen and (min-width: 600px) {
     article {
         /* margin: auto; */
@@ -82,5 +90,9 @@ p {
 
     p, ul li, date, figcaption {
         font-size: 18px;
+    }
+
+    img {
+        width: 50vw;
     }
 }
