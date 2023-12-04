@@ -15,7 +15,7 @@ article {
     border-radius: 10px;
 }
 
-article h1, h2, h3, p, date, figcaption {
+article h1, h2, h3, p, date, figcaption, ol, ul {
     width: 75vw;
     margin: auto;
 }
@@ -37,23 +37,26 @@ h2 {
     font-family: 'Fraunces', serif;
     font-weight: 500;
     color: #000;
-    font-size: 24px;
-    padding: 25px 0;
+    font-size: 28px;
+    padding-bottom: 25px;
 }
 
-ul {
-    padding: 0;
+h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 18px;
+    padding-bottom: 25px;
 }
 
-p, ul li, date, figcaption {
-    list-style-type: none;
+p, ul li, date, figcaption, ol, ul {
     font-family: 'Lora', serif;    
     font-weight: 400;
     font-size: 16px;
     color: #000;
 }
 
-p {
+p, ol li, ul li {
     line-height: 1.6em;
     text-align: left;
     padding-bottom: 25px;
@@ -80,15 +83,19 @@ img {
     }
     
     h2 {
-        font-size: 24px;
+        font-size: 42px;
         padding-top: 20px;
     }
 
-    article h1, article h2, h3, p, figcaption, date {
+    h3 {
+        font-size: 28px;
+    }
+
+    article h1, article h2, h3, p, figcaption, date, ol, ul {
         width: 50vw;
     }
 
-    p, ul li, date, figcaption {
+    p, ul li, date, figcaption, ol li{
         font-size: 18px;
     }
 
