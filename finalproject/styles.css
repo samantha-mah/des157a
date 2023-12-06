@@ -1,0 +1,511 @@
+body {
+    background-color: #000;
+    z-index: -5;
+}
+
+#long-div {
+    height: 3000px;
+    width: 10px;
+    z-index: -4;
+}
+
+main {
+    max-width: 600px;
+}
+
+.one {
+    transition: all 1s;
+}
+
+.two {
+    transition: all 1s;
+}
+
+.caption {
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+#overlay {
+    position: fixed;
+    left: calc(50% - 150px);
+    top: 200px;
+    z-index: 0;
+    animation: opacity 5s ease forwards;
+}
+
+#camera {
+    width: 300px;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+#section1 {
+    position: absolute;
+    right: 50px;
+    top: 900px;
+}
+
+#image1 {
+    display: block;
+    width: 150px;
+    cursor: pointer;
+}
+
+#section2 {
+    position: absolute;
+    left: 50px;
+    top: 1200px;
+}
+
+#image2 {
+    display: block;
+    width: 150px;
+    cursor: pointer;
+}
+
+#section3 {
+    position: absolute;
+    left: 150px;
+    top: 1400px;
+}
+
+#image3 {
+    display: block;
+    width: 150px;
+    cursor: pointer;
+}
+
+#section4 {
+    position: absolute;
+    left: 50px;
+    top: 1775px;
+}
+
+#image4 {
+    display: block;
+    width: 125px;
+    cursor: pointer;
+}
+
+#section5 {
+    position: absolute;
+    right: 50px;
+    top: 1750px;
+}
+
+#image5 {
+    display: block;
+    width: 175px;
+    cursor: pointer;
+}
+
+#section6 {
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 2250px;
+}
+
+#image6 {
+    display: block;
+    width: 310px;
+    cursor: pointer;
+}
+
+#section7 {
+    position: absolute;
+    right: 50px;
+    top: 2750px;
+    padding-bottom: 100px;
+}
+
+#image7 {
+    display: block;
+    width: 150px;
+    cursor: pointer;
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#blurb {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    z-index: -1;
+}
+
+#intro h1 {
+    display: inline-block;
+    animation: introScaleTranslate 1.5s ease forwards;
+    animation-delay: 1.5s;
+    height: 100vh;
+    pointer-events: none;
+}
+
+@keyframes introScaleTranslate {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-50%) scale(0.5);
+    }
+}
+
+.imageScale1  {
+    animation: imageScale1 1s ease forwards;
+}
+
+@keyframes imageScale1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.85);
+    }
+}
+
+.imageScaleDown1  {
+    animation: imageScaleDown1 1s ease forwards;
+}
+
+@keyframes imageScaleDown1 {
+    0% {
+        transform: scale(1.85);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.imageScale2  {
+    animation: imageScale2 1s ease forwards;
+}
+
+@keyframes imageScale2 {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    100% {
+        transform: scale(1.85) translateX(32.5vw);
+    }
+}
+
+.imageScaleDown2  {
+    animation: imageScaleDown2 1s ease forwards;
+}
+
+@keyframes imageScaleDown2 {
+    0% {
+        transform: scale(1.5) translateX(32.5vw);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.imageScale3  {
+    animation: imageScale3 1s ease forwards;
+}
+
+@keyframes imageScale3 {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    100% {
+        transform: scale(1.85) translateX(27vw);
+    }
+}
+
+.imageScaleDown3  {
+    animation: imageScaleDown3 1s ease forwards;
+}
+
+@keyframes imageScaleDown3 {
+    0% {
+        transform: scale(1.5) translateX(27vw);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.imageScale4 {
+    animation: imageScale2 1s ease forwards;
+}
+
+.imageScaleDown4  {
+    animation: imageScaleDown2 1s ease forwards;
+}
+
+.imageScale5  {
+    animation: imageScale1 1s ease forwards;
+}
+
+.imageScaleDown5  {
+    animation: imageScaleDown1 1s ease forwards;
+}
+
+.imageScale6  {
+    animation: imageScale6 1s ease forwards;
+}
+
+@keyframes imageScale6 {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    100% {
+        transform: scale(1.85) translateX(16.5vw);
+    }
+}
+
+.imageScaleDown6  {
+    animation: imageScaleDown6 1s ease forwards;
+}
+
+@keyframes imageScaleDown6 {
+    0% {
+        transform: scale(1.5) translateX(16.5vw);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+.imageScale7  {
+    animation: imageScale1 1s ease forwards;
+}
+
+.imageScaleDown7  {
+    animation: imageScaleDown1 1s ease forwards;
+}
+
+article {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#article1 {
+    position: absolute;
+    top: 1250px;
+    left: 0;
+}
+
+#article2 {
+    position: absolute;
+    top: 2000px;
+    right: 0;
+}
+
+#article3 {
+    position: absolute;
+    top: 2550px;
+    right: 0;
+}
+
+#article4 {
+    position: absolute;
+    top: 3750px;
+    right: 0;
+}
+
+#article5 {
+    position: absolute;
+    top: 3300px;
+    right: 0;
+}
+
+#article6 {
+    position: absolute;
+    top: 4525px;
+    right: 0;
+}
+
+#article7 {
+    position: absolute;
+    top: 5250px;
+    right: 0;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+article h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    color: #000;
+    text-align: left;
+    position: relative;
+    top: 35%;
+    left: 5vw;
+}
+
+article h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #000;
+    text-align: left;
+    position: relative;
+    top: 36%;
+    left: 5vw;
+}
+
+article p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+    position: relative;
+    top: 38%;
+    left: 5vw;
+}
+
+button {
+    z-index: 10;
+    position: relative;
+    top: 40%;
+    left: 5vw;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        height: 5500px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #long-div {
+        height: 5500px;
+        width: 10px;
+    }
+
+    #overlay {
+        position: fixed;
+        left: calc(50% - 300px);
+        top: 0;
+    }
+
+    #camera {
+        width: 600px;
+    }
+
+    #section1 {
+        right: 10vw;
+        top: 1500px;
+        z-index: 1;
+    }
+
+    #image1 {
+        width: 20vw;
+    }
+
+    #section2 {
+        left: 10vw;
+        top: 2250px;
+        z-index: 1;
+    }
+
+    #image2 {
+        width: 20vw;
+    }
+
+    #section3 {
+        left: 20vw;
+        top: 2800px;
+        z-index: 1;
+    }
+
+    #image3 {
+        width: 20vw;
+    }
+
+    #section4 {
+        left: 10vw;
+        top: 4000px;
+        z-index: 1;
+    }
+
+    #image4 {
+        width: 20vw;
+    }
+
+    #section5 {
+        right: 10vw;
+        top: 3550px;
+        z-index: 1;
+    }
+
+    #image5 {
+        width: 20vw;
+    }
+
+    #section6 {
+        top: 4775px;
+        right: 20vw;
+        z-index: 1;
+    }
+
+    #image6 {
+        width: 20vw;
+    }
+
+    #section7 {
+        right: 10vw;
+        top: 5500px;
+        padding-bottom: 100px;
+        z-index: 1;
+    }
+
+    #image7 {
+        width: 20vw;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+}
