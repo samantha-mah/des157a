@@ -64,13 +64,13 @@ window.addEventListener('load', function () {
         }
     });
 
+    const nodeList = document.querySelectorAll('section');
+    const sections = Array.prototype.slice.call(nodeList);
+    
     // checks for desktop or mobile
     // if mobile, captions will become visible on scroll
     // if desktop, captions will become visible on hover
     if(pageWidth > 600) {
-
-        const nodeList = document.querySelectorAll('section');
-        const sections = Array.prototype.slice.call(nodeList);
 
 
         for(const eachSection of sections) {
@@ -93,40 +93,6 @@ window.addEventListener('load', function () {
 
                 const thisMouseout = document.querySelector(`#hover${mouseoutSectionNumber}`).style.opacity = '0';            
             });
-
-            eachSection.addEventListener('click', function(event) {
-
-                const thisClickedSection = event.target.id;
-                const clickedSectionNumber = thisClickedSection.charAt(thisClickedSection.length - 1);
-
-                document.querySelector(`#image${clickedSectionNumber}`).className = `imageScale${clickedSectionNumber}`;
-
-                // console.log(`imagescale${clickedSectionNumber}`);
-
-                document.querySelector(`#article${clickedSectionNumber}`).className = 'showing';
-
-                const thisMouseout = document.querySelector(`#hover${clickedSectionNumber}`).style.opacity = '0';            
-
-            });
-        }
-
-        const buttonList = document.querySelectorAll('button');
-        const buttons = Array.prototype.slice.call(buttonList);
-
-        for(const eachButton of buttons) {
-
-            eachButton.addEventListener('click', function(event) {
-
-                const thisClickedButton = event.target.id;
-                const clickedButtonNumber = thisClickedButton.charAt(thisClickedButton.length - 1);
-
-                document.querySelector(`#image${clickedButtonNumber}`).className = `imageScaleDown${clickedButtonNumber}`;
-
-                console.log(`#article${clickedButtonNumber}`);
-
-                document.querySelector(`#article${clickedButtonNumber}`).className = 'hidden';
-
-            });
         }
 
     }
@@ -139,6 +105,40 @@ window.addEventListener('load', function () {
         hover5.style.opacity = '1';
         hover6.style.opacity = '1';
         hover7.style.opacity = '1';
+    }
+
+    for(const eachSection of sections) {
+
+        eachSection.addEventListener('click', function(event) {
+
+            const thisClickedSection = event.target.id;
+            const clickedSectionNumber = thisClickedSection.charAt(thisClickedSection.length - 1);
+
+            document.querySelector(`#image${clickedSectionNumber}`).className = `imageScale${clickedSectionNumber}`;
+
+            // console.log(`imagescale${clickedSectionNumber}`);
+
+            document.querySelector(`#article${clickedSectionNumber}`).className = 'showing';
+        });
+    }
+
+    const buttonList = document.querySelectorAll('button');
+    const buttons = Array.prototype.slice.call(buttonList);
+
+    for(const eachButton of buttons) {
+
+        eachButton.addEventListener('click', function(event) {
+
+            const thisClickedButton = event.target.id;
+            const clickedButtonNumber = thisClickedButton.charAt(thisClickedButton.length - 1);
+
+            document.querySelector(`#image${clickedButtonNumber}`).className = `imageScaleDown${clickedButtonNumber}`;
+
+            console.log(`#article${clickedButtonNumber}`);
+
+            document.querySelector(`#article${clickedButtonNumber}`).className = 'hidden';
+
+        });
     }
 
 });
