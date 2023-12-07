@@ -144,6 +144,7 @@ p {
 
 h1 {
     font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
     font-size: 64px;
     color: #fff;
     position: absolute;
@@ -172,6 +173,7 @@ h1 {
     animation-delay: 1.5s;
     height: 100vh;
     pointer-events: none;
+    font-weight: 300;
 }
 
 #film {
@@ -212,32 +214,36 @@ article {
 }
 
 article h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Fraunces', serif;
     font-size: 48px;
+    font-weight: 600;
     color: #000;
     text-align: left;
     position: relative;
-    top: 35%;
+    top: 33%;
     left: 5vw;
+    margin: 0;
 }
 
 article h2 {
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
+    font-weight: 400;
     color: #000;
     text-align: left;
     position: relative;
-    top: 36%;
+    top: 33.5%;
     left: 5vw;
 }
 
 article p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 300;
     color: #000;
     text-align: left;
     position: relative;
-    top: 38%;
+    top: 34%;
     left: 5vw;
     width: 33vw;
 }
@@ -249,8 +255,8 @@ button {
     left: 5vw;
     cursor: pointer;
     font-family: 'DM sans', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     color: #000;
     background-color: #fff;
     border-radius: 5px ;
