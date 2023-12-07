@@ -55,7 +55,6 @@ main {
     position: absolute;
     right: 10vw;
     top: 1500px;
-    z-index: 7;
 }
 
 #image1 {
@@ -68,7 +67,6 @@ main {
     position: absolute;
     left: 10vw;
     top: 2250px;
-    z-index: 1;
 }
 
 #image2 {
@@ -81,7 +79,6 @@ main {
     position: absolute;
     left: 20vw;
     top: 2800px;
-    z-index: 1;
 }
 
 #image3 {
@@ -94,7 +91,6 @@ main {
     position: absolute;
     left: 10vw;
     top: 4100px;
-    z-index: 1;
 }
 
 #image4 {
@@ -107,7 +103,6 @@ main {
     position: absolute;
     right: 10vw;
     top: 3550px;
-    z-index: 1;
 }
 
 #image5 {
@@ -120,7 +115,6 @@ main {
     position: absolute;
     top: 4775px;
     right: 20vw;
-    z-index: 1;
 }
 
 #image6 {
@@ -134,7 +128,6 @@ main {
     right: 10vw;
     top: 5500px;
     padding-bottom: 100px;
-    z-index: 1;
 }
 
 #image7 {
@@ -181,6 +174,11 @@ h1 {
     pointer-events: none;
 }
 
+#film {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+}
+
 article {
     position: absolute;
     background-color: #fff;
@@ -189,6 +187,9 @@ article {
     width: 100vw;
     height: 100vh;
     transition: opacity 1s ease, visibility 1s ease;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
 }
 
 @keyframes introScaleTranslate {
@@ -212,7 +213,7 @@ article {
 
 article h1 {
     font-family: 'DM Sans', sans-serif;
-    font-size: 32px;
+    font-size: 48px;
     color: #000;
     text-align: left;
     position: relative;
@@ -222,7 +223,7 @@ article h1 {
 
 article h2 {
     font-family: 'DM Sans', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     color: #000;
     text-align: left;
     position: relative;
@@ -232,7 +233,7 @@ article h2 {
 
 article p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     color: #000;
     text-align: left;
     position: relative;
@@ -247,6 +248,12 @@ button {
     top: 40%;
     left: 5vw;
     cursor: pointer;
+    font-family: 'DM sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px ;
 }
 
 @keyframes introScaleTranslate {
@@ -271,7 +278,7 @@ button {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.85);
+        transform: scale(1.5);
     }
 }
 
@@ -281,7 +288,7 @@ button {
 
 @keyframes imageScaleDown1 {
     0% {
-        transform: scale(1.85);
+        transform: scale(1.5);
     }
     100% {
         transform: scale(1);
@@ -297,7 +304,7 @@ button {
         transform: scale(1) translateX(0);
     }
     100% {
-        transform: scale(1.85) translateX(32.5vw);
+        transform: scale(1.5) translateX(35vw);
     }
 }
 
@@ -307,7 +314,7 @@ button {
 
 @keyframes imageScaleDown2 {
     0% {
-        transform: scale(1.5) translateX(32.5vw);
+        transform: scale(1.5) translateX(35vw);
     }
     100% {
         transform: scale(1) translateX(0);
@@ -323,7 +330,7 @@ button {
         transform: scale(1) translateX(0);
     }
     100% {
-        transform: scale(1.85) translateX(27vw);
+        transform: scale(1.5) translateX(30vw);
     }
 }
 
@@ -333,7 +340,7 @@ button {
 
 @keyframes imageScaleDown3 {
     0% {
-        transform: scale(1.5) translateX(27vw);
+        transform: scale(1.5) translateX(30vw);
     }
     100% {
         transform: scale(1) translateX(0);
@@ -366,7 +373,7 @@ button {
         transform: scale(1) translateX(0);
     }
     100% {
-        transform: scale(1.85) translateX(5.5vw);
+        transform: scale(1.5) translateX(6vw);
     }
 }
 
@@ -376,7 +383,7 @@ button {
 
 @keyframes imageScaleDown6 {
     0% {
-        transform: scale(1.5) translateX(5.5vw);
+        transform: scale(1.5) translateX(6vw);
     }
     100% {
         transform: scale(1) translateX(0);
@@ -391,44 +398,6 @@ button {
     animation: imageScaleDown1 1s ease forwards;
 }
 
-#article1 {
-    position: absolute;
-    top: 1250px;
-    left: 0;
-}
-
-#article2 {
-    position: absolute;
-    top: 2000px;
-    right: 0;
-}
-
-#article3 {
-    position: absolute;
-    top: 2550px;
-    right: 0;
-}
-
-#article4 {
-    position: absolute;
-    top: 3850px;
-    right: 0;
-}
-
-#article5 {
-    position: absolute;
-    top: 3300px;
-    right: 0;
-}
-
-#article6 {
-    position: absolute;
-    top: 4525px;
-    right: 0;
-}
-
-#article7 {
-    position: absolute;
-    top: 5250px;
-    right: 0;
+.nooverflow {
+    overflow: hidden;
 }

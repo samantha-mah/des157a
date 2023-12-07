@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
 
     });
 
+
     // when user reaches certain length down the page, background color switches from white to black and vice versa
     // image src switches from camera to image of hydrangeas after reaching max size
     // image is removed after page turns white
@@ -116,9 +117,14 @@ window.addEventListener('load', function () {
 
             document.querySelector(`#image${clickedSectionNumber}`).className = `imageScale${clickedSectionNumber}`;
 
-            // console.log(`imagescale${clickedSectionNumber}`);
+            document.querySelector(`#article${clickedSectionNumber}`).style.top = `${window.scrollY}px`;
 
             document.querySelector(`#article${clickedSectionNumber}`).className = 'showing';
+
+            document.querySelector("body").className = 'nooverflow';
+
+            console.log(window.scrollY);
+
         });
     }
 
@@ -137,6 +143,8 @@ window.addEventListener('load', function () {
             console.log(`#article${clickedButtonNumber}`);
 
             document.querySelector(`#article${clickedButtonNumber}`).className = 'hidden';
+
+            document.querySelector('body').removeAttribute("class");
 
         });
     }
